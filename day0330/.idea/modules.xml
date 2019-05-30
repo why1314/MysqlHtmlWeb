@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ajax/ajax.iml" filepath="$PROJECT_DIR$/ajax/ajax.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ajax_01/ajax_01.iml" filepath="$PROJECT_DIR$/ajax_01/ajax_01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/highjqueryhigh/highjqueryhigh.iml" filepath="$PROJECT_DIR$/highjqueryhigh/highjqueryhigh.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jquery/jquery.iml" filepath="$PROJECT_DIR$/jquery/jquery.iml" />
+      <module fileurl="file://$PROJECT_DIR$/testjquery/testjquery.iml" filepath="$PROJECT_DIR$/testjquery/testjquery.iml" />
+    </modules>
+  </component>
+</project>

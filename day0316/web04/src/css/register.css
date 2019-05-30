@@ -1,0 +1,79 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+
+
+#outDiv{
+    width: 858px;
+    border: 8px solid #EEEEEE;
+    height: 540px;
+    margin: auto;
+    margin-top: 20px;
+}
+/*使用浮动让3个div在同一行*/
+#outDiv > div{
+    float: left;
+    height: 100%;
+}
+#divId1{
+    width: 30%;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+/*操作p标签*/
+#divId1 > p:first-child{
+    font-size: 20px;
+    color: #FFCD26;
+}
+#divId1 > p:last-child{
+    font-size: 20px;
+    color: #A6AEC5;
+}
+
+#divId2{
+    width: 40%;
+    padding-top: 30px;
+}
+/*装饰左边的列*/
+.lf{
+    width: 30%;
+    text-align: right;
+}
+.rt{
+    width: 70%;
+    line-height: 50px;
+    padding-left: 10px;
+}
+/*设置输入框的样式*/
+input[type="text"],input[type="password"]{
+    width: 250px;
+    height: 30px;
+    border-radius:5px;
+    border: 1px solid #a6a6a6;
+}
+#code{
+    width: 100px;
+}
+#subId{
+    width: 100px;
+    height: 30px;
+    background-color: #FFC900;
+}
+
+
+#divId3{
+    width: 30%;
+}
+#divId3 > p{
+    text-align: right;
+    padding-top: 20px;
+    padding-right: 10px;
+}
+#aId{
+    color: #FC8989;
+}

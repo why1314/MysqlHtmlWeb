@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+        <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+        <script>
+            $(function () {
+                $("#divId").hover(function () {
+                    $(this).css("background","#0f0");
+                },function () {
+                    $(this).css("background","#ff0");
+                }).mouseup(function () {
+                    $(this).css("background","#f00");
+                });
+            });
+        </script>
+	</head>
+
+	<body>
+		<div id="divId" style="border:1px solid red;height:200px;width:200px">事件切换</div>
+	</body>
+
+</html>

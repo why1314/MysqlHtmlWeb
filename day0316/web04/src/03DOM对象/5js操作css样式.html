@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        .two {
+            color: red;
+            font‐size: 45px;
+            font‐family: 隶书;
+        }
+    </style>
+    <script type="text/javascript">
+        //给第一个p 添加  color: blue; font‐size: 30px; font‐family: 楷体;
+        function changeCss() {
+            document.getElementById("first").style.color = "blue";
+            document.getElementById("first").style.fontSize = "30px";
+            document.getElementById("first").style.fontFamily = "楷体";
+
+        }
+
+        //通过操作calss属性添加样式
+        function changeClass() {
+            document.getElementById("second").className="second";
+          var objArr= document.getElementsByClassName("second");
+            for (var i = 0; i < objArr.length; i++) {
+                var obj = objArr[i];
+                obj.innerHTML="<font color='red'>akjdga,dsghasdjafdsjhadg</font>"
+
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+<p id="first">
+    这是第一自然段
+</p>
+<p id="second">
+    这是第二自然段
+</p>
+<input type="button" value="改变几个样式" onclick="changeCss()"/>
+<input type="button" value="改变类样式" onclick="changeClass()"/>
+</body>
+</html>

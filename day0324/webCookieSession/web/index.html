@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script type="text/javascript">
+
+            onload = function () {
+                alert(document.cookie);
+            }
+        </script>
+    </head>
+    <body>
+        <a href="/cookie/createCookie">创建并返回cookie对象</a>
+        <a href="/cookie/setMaxAge">设置cookie的存活时间</a>
+        <a href="/cookie/defaultPath">测试cookie的访问路径</a>
+        <a href="/cookie/aa/defaultPath">获取请求携带的cookie对象</a>
+        <a href="/cookie/login">获取上一次访问时间</a>
+        <hr>
+
+        <form action="/cookie/user" method="post">
+            用户名：<input type="text" name="userName"><br>
+            密码：<input type="password" name="password"><br>
+            验证码：<input type="text" name="ucode"><img src="code" onclick="changeCode(this)"><br>
+            记录用户名：<input type="checkbox" name="rember"><br>
+            <input type="submit" value="post提交">
+        </form>
+    </body>
+</html>

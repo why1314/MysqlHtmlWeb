@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <style>
+            h1 {
+                color: blue;
+                font-size: 40px;
+            }
+        </style>
+
+        <script>
+
+            var interId;
+
+            function start() {
+                //开始之前先清除上一个定时器
+                clearInterval(interId);
+                interId = setInterval(changeTime, 1000);
+            }
+
+            function changeTime() {
+                var hObj = document.getElementById("h1");
+                var time = new Date();
+                hObj.innerHTML = time.toLocaleDateString() + "  " + time.getHours() + ":" + time.getMinutes() + ":" + time.getSeconds();
+
+            }
+
+            function pause() {
+                clearInterval(interId);
+            }
+        </script>
+
+    </head>
+    <body>
+        <h1 id="h1"></h1>
+        <input type="button" value="开始" onclick="start()">
+        <input type="button" value="暂停" onclick="pause()">
+    </body>
+</html>

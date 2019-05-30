@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function selectAll(obj) {
+            // var flag = obj.checked;
+            var itemObjArr = document.getElementsByName("item");
+            for(var i=0;i<itemObjArr.length;i++){
+                itemObjArr[i].checked =  obj.checked;
+            }
+        }
+        function reverseSelect() {
+            var itemObjArr = document.getElementsByName("item");
+            for(var i=0;i<itemObjArr.length;i++){
+                itemObjArr[i].checked = !itemObjArr[i].checked;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h3>商品价格列表</h3>
+    <input type="checkbox" name="item" value="1500" /> 山地自行车1500<br />
+    <input type="checkbox" name="item" value="200"  /> 时尚女装200<br />
+    <input type="checkbox" name="item" value="3000"  /> 笔记本电脑3000元<br />
+    <input type="checkbox" name="item" value="800"  /> 情侣手表800<br />
+    <input type="checkbox" name="item" value="2000"  /> 桑塔纳2000<br />
+    <hr/>
+    <input type="checkbox" id="all" onclick="selectAll(this)"  />全选/全不选 &nbsp;
+    <input type="button" id="reverse" onclick="reverseSelect()"  value=" 反 选 "/>&nbsp;
+</body>
+</html>

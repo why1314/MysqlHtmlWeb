@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+            function getVal() {
+                alert(document.getElementById("sp").innerText);
+            }
+
+            function setVal() {
+                document.getElementById("sp").innerHTML = "<font color='red'>djkghau,dsgal</font>";
+            }
+		</script>
+	</head>
+	<body>
+		<span id="sp">佑我中华</span><br />
+		<input type="button" value="获取标签体的内容" onclick="getVal()"/>
+		<input type="button" value="设置标签体的内容" onclick="setVal()"/>
+	</body>
+</html>

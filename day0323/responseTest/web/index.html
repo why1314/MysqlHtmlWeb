@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            function changeImg(obj) {
+                obj.src="checkCode?"+new Date().getTime();
+            }
+        </script>
+    </head>
+    <body>
+        <h3>response对象的相关操作</h3>
+        <a href="refresh">定时刷新</a>
+        <a href="hello">返回中文五乱码</a>
+        <a href="body">操作相应提</a>
+
+
+        <hr>
+        <a href="getMime?fileName=why.avi">通过上下文获取对象文件</a>
+        <a href="setAttr">向上下文对象中设置属性</a>
+        <a href="getAttr">向上下文对象中获取属性</a>
+        <a href="updateAttr">向上下文对象中更新属性</a>
+        <a href="removeAttr">向上下文对象中删除属性</a>
+        <a href="getRealPath">获取完整路径</a>
+
+
+        <hr>
+        <h3>图片下载</h3>
+        <a href="downLoad?fileName=jinzita.jpg">图片下载</a>
+        <a href="downLoad?fileName=文本.txt">文本下载</a>
+
+        <hr>
+        <img src="checkCode" onclick="changeImg(this)">
+        
+        
+    </body>
+</html>

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="maven_travel:war">
+    <output-path>$PROJECT_DIR$/maven_travel/target</output-path>
+    <root id="archive" name="maven_travel.war">
+      <element id="artifact" artifact-name="maven_travel:war exploded" />
+    </root>
+  </artifact>
+</component>

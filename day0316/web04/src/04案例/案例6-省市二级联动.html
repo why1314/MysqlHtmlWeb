@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        // 定义二维数组:
+        var arr = new Array(4);
+        arr[0] = new Array("哈尔滨","齐齐哈尔","大庆","佳木斯");
+        arr[1] = new Array("长春市","吉林市","四平市","通化市");
+        arr[2] = new Array("沈阳市","锦州市","大连市","铁岭市");
+        arr[3] = new Array("郑州市","洛阳市","安阳市","南阳市");
+    </script>
+    <script>
+        function changePro(index) {
+            var cityArr = arr[index];
+            var cityObj = document.getElementById("city");
+            cityObj.innerHTML = "<option>==请选择==</option>";
+            for(var i=0;i<cityArr.length;i++){
+                cityObj.innerHTML += "<option>"+cityArr[i]+"</option>";
+            }
+        }
+    </script>
+</head>
+<body>
+<form action="#" method="get">
+    籍贯:
+    <select name="pro" onchange="changePro(this.value)">
+        <option>请选择</option>
+        <option value="0">黑龙江</option>
+        <option value="1">吉林</option>
+        <option value="2">辽宁</option>
+        <option value="3">河南</option>
+    </select>
+    <select id="city">
+        <option >-请选择-</option>
+    </select>
+</form>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script src="js/jquery-3.3.1.js"></script>
+        <script src="js/messages_zh.js"></script>
+        <script src="js/bootstrap.js"></script>
+
+    </head>
+    <body>
+        <h2 align="center">省市二级联动</h2>
+        <form action="" style="text-align: center">
+            <select name="pro" id="pro" onchange="findCityByPid(this.value)">
+                <option value="">==请选择==</option>
+            </select>省
+            <select name="city" id="city">
+                <option value="">==请选择==</option>
+            </select>市
+        </form>
+    </body>
+    <script>
+        $(function () {
+            var url = "province";
+            var params = {"method": "findAllProvince"};
+            $.post(url, params, function (data) {
+                $.each(data, function (index, ele) {
+                    $("#pro").append("<option value='" + ele.pid + "'>" + ele.pname + "</option>")
+                })
+            }, "json");
+        });
+    </script>
+    <script>
+        function findCityByPid(pid) {
+            var url = "city";
+            var params = {"method": "findCityByPid", "pid": pid};
+            $.post(url, params, function (data) {
+                $("#city").empty();
+                $.each(data, function (index, ele) {
+                    $("#city").append("<option value='" + ele.cid + "'>" + ele.cname + "</option>")
+                })
+            }, "json");
+        }
+    </script>
+
+</html>

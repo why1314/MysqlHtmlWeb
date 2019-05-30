@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+        onload = function () {
+            interId = setInterval(changeImg, 2000);
+        }
+        var i = 0;
+
+        function changeImg() {
+            i++;
+            var imgObj = document.getElementById("imgId");
+            imgObj.src = "../img/" + i + ".jpg";
+            imgObj.style.width = "400px";
+            imgObj.style.height = "400px";
+            if (i == 4) {
+                i = -1
+            }
+
+        }
+
+        function clearChange() {
+            clearInterval(interId);
+        }
+
+    </script>
+</head>
+<body>
+<div class="container">
+    <img src="../img/0.jpg" id="imgId" onclick="clearChange()">
+</div>
+</body>
+</html>

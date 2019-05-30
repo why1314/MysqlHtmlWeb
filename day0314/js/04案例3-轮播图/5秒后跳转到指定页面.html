@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var interId
+        onload=function () {
+           interId= setInterval(changeTimes,1000);
+        }
+        var count=5;
+        function changeTimes() {
+            document.getElementById("span").innerHTML=--count;
+            if (count==0){
+                clearInterval(interId);
+                location.href="";
+            }
+        }
+
+    </script>
+</head>
+<body>
+<h1>支付成功，<span id="span">5</span>秒后成功跳转</h1>
+</body>
+</html>

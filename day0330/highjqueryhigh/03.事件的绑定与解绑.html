@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件的绑定与解绑.html</title>
+    <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+    <script>
+        $(function () {
+
+            $("#bid0").click(function () {
+                alert("我被点击了")
+            })
+
+            $("#bid1").on("dblclick",function () {
+                alert("我被点击了....")
+            })
+
+            $("#bid2").click(function () {
+                $("#bid1").off("dblclick")
+                alert("解绑成功")
+            })
+
+        });
+    </script>
+</head>
+<body>
+    <button id="bid0">事件派发</button><br>
+    <button id="bid1">按钮1-使用on给我添加单击事件</button><br>
+    <button id="bid2">接触按钮1的绑定单击事件</button><br>
+</body>
+</html>

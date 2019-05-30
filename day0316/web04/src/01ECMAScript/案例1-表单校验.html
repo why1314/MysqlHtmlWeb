@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        @import url("../css/register.css");
+    </style>
+    <script>
+        function isTrue(val) {
+            // alert(val);
+            var reg = /[a-zA-Z_-]{3,8}/i;
+            var flag = reg.test(val);
+            if (!flag) {
+                document.getElementById("usernameMsg").innerHTML = "<font color='red'>用户名格式不正确</font>"
+            } else {
+                document.getElementById("usernameMsg").innerHTML = "<font color='blue'>√</font>"
+            }
+        }
+
+    </script>
+</head>
+<body>
+<!--1.创建一个大的div,让该div居中-->
+<div id="outDiv">
+    <div id="divId1">
+        <p>新用户注册</p>
+        <p>USER REGISTER</p>
+    </div>
+    <div id="divId2">
+        <!--添加一个表单-->
+        <form action="#" method="get" onsubmit="return checkForm()">
+            <table>
+                <tr>
+                    <td class="lf">用户名:</td>
+                    <td class="rt">
+                        <input type="text" id="username" name="username" placeholder="请输入用户名"
+                               onblur="isTrue(this)"/>
+                        <span id="usernameMsg"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="lf">密码</td>
+                    <td class="rt">
+                        <input id="pwd" type="password" name="pwd" placeholder="请输入密码"/>
+                        <span id="pwdMsg"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="lf">Email</td>
+                    <td class="rt"><input type="text" id="email" name="email" placeholder="请输入邮箱"/></td>
+                </tr>
+                <tr>
+                    <td class="lf">姓名</td>
+                    <td class="rt"><input type="text" id="name" name="name" placeholder="请输入真实名称"/></td>
+                </tr>
+                <tr>
+                    <td class="lf">手机号</td>
+                    <td class="rt"><input type="text" id="phone" name="phone" placeholder="请输入手机号"/></td>
+                </tr>
+                <tr>
+                    <td class="lf">性别</td>
+                    <td class="rt"><input type="radio" name="sex" value="1"/>男
+                        <input type="radio" name="sex" value="0"/>女
+                    </td>
+                </tr>
+                <tr>
+                    <td class="lf">生日</td>
+                    <td class="rt"><input type="date" id="birthday" name="birthday" placeholder="请输入生日"/></td>
+                </tr>
+                <tr>
+                    <td class="lf">验证码</td>
+                    <td class="rt">
+                        <input type="text" id="code" name="birthday" placeholder="输入验证码"/>
+                        <img id="imgId" src="img/a.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="lf"></td>
+                    <td class="rt">
+                        <input type="submit" value="注册" id="subId"/>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <div id="divId3">
+        <p>
+            已有账号？ <a href="#" id="aId">立即登录</a>
+        </p>
+    </div>
+</div>
+</body>
+</html>

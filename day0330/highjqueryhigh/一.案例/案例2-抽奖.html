@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>抽奖小程序</title>
+        <script type="text/javascript" src="../js/jquery-3.3.1.js"></script>
+        <script language='javascript' type='text/javascript'>
+            //准备一个一维数组，装用户的像片路径
+            var imgs = [
+                "../img/scenery/1.jpg", "../img/scenery/2.jpg", "../img/scenery/3.jpg",
+                "../img/scenery/4.jpg", "../img/scenery/5.jpg", "../img/scenery/6.jpg",
+                "../img/scenery/7.jpg", "../img/scenery/8.jpg", "../img/scenery/9.jpg",
+                "../img/scenery/10.jpg", "../img/scenery/11.jpg", "../img/scenery/12.jpg",
+                "../img/scenery/13.jpg", "../img/scenery/14.jpg", "../img/scenery/15.jpg",
+                "../img/scenery/16.jpg", "../img/scenery/17.jpg", "../img/scenery/18.jpg",
+                "../img/scenery/19.jpg", "../img/scenery/20.jpg", "../img/scenery/21.jpg",
+            ];
+
+            //页面加载成功后id为stopID的dom对象不能启用
+            $(function () {
+                $("#stopID").attr("disabled", true)
+            });
+
+            //
+            function imgStart() {
+                $("#startID").attr("disabled", true)
+                $("#stopID").attr("disabled", false)
+
+                //所谓的轮播，就是执行周期定时器
+                interId = setInterval(changImg, 100)
+            }
+
+
+            var i = 0;
+
+            function changImg() {
+                $("#img1ID").attr("src", imgs[i])
+                i++;
+                if (i == imgs.length) {
+                    i = 0;
+                }
+            }
+
+            $(function () {
+                $("#div1").click(function () {
+                    alert($("#img1ID").width()+"  "+$("#img1ID").height());
+                })
+            })
+
+            function imgStop() {
+                $("#stopID").attr("disabled", true)
+                $("#startID").attr("disabled", false)
+                clearInterval(interId);
+                setTimeout(showImg, 1000);
+            }
+
+            function showImg() {
+                $("#img2ID").attr("src", imgs[--i]);
+            }
+        </script>
+    </head>
+    <body>
+        <!-- 小像框 -->
+        <div style="border-style:dotted;width:50px;height:50px">
+            <img id="img1ID" src="" style="width:50px;height:50px"/>
+        </div>
+        <!-- 大像框 -->
+        <div style="border-style:double;width:700px;height:500px;position:absolute;left:500px;top:10px">
+            <img id="img2ID" src="" style="width:700px;height:500px"/>
+        </div>
+
+        <!-- 开始按钮 -->
+        <input onclick="imgStart()" id="startID" type="button" value="点击开始"
+               style="width:150px;height:150px;font-size:22px">
+
+        <!-- 停止按钮 -->
+        <input onclick="imgStop()" id="stopID" type="button" value="点击停止">
+        <div id="div1" style="width: 30px;height: 30px;background-color: red"></div>
+    </body>
+</html>

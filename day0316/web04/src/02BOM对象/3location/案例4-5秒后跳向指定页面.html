@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var count = 5;
+        onload = function () {
+            setInterval(changeTime, 1000);
+        }
+
+        function changeTime() {
+            if (count == 0) {
+                location.href = "location.html";
+            }
+            document.getElementById("spId").innerHTML = --count;
+        }
+
+    </script>
+</head>
+<body>
+<h1>支付成功,<span id="spId">5</span>秒后跳回首页</h1>
+</body>
+</html>

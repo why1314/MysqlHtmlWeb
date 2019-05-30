@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        function btn() {
+            /*通过id选择器获取文本框的值*/
+            // alert(document.getElementById("usernameId").value);
+            /*获取所有span标签中的值*/
+            // var spanObjArr = document.getElementsByTagName("span");
+            // for (var i = 0; i < spanObjArr.length; i++) {
+            //     var obj = spanObjArr[i];
+            //     alert(obj.innerHTML);
+            //
+            // }
+
+            /*获取所有class为spanClass的元素对象*/
+
+            // var spanObjArr = document.getElementsByClassName("spanClass");
+            // for (var i = 0; i < spanObjArr.length; i++) {
+            //     var obj = spanObjArr[i];
+            //     alert(obj.innerHTML);
+            // }
+
+            /*获取name为hobby的元素对象*/
+         alert(document.getElementsByName("hobby").length);
+
+
+        }
+    </script>
+</head>
+<body>
+<input type="text" value="tom" id="usernameId" name="username"/><br/>
+<input type="checkbox" name="hobby" value="抽烟"/>抽烟<br/>
+<input type="checkbox" name="hobby" value="喝酒"/>喝酒<br/>
+<input type="checkbox" name="hobby" value="烫头"/>烫头<br/>
+<span class="spanClass">佑我中华</span>
+<span class="spanClass">佑我中华1</span>
+<span>佑我中华2</span><br/>
+<input type="button" value="获取对象" onclick="btn()"/>
+</body>
+</html>

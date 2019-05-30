@@ -1,0 +1,42 @@
+package com.itheima.web.servlet;
+
+import com.itheima.service.UserService;
+import com.itheima.service.impl.UserServiceImpl;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+
+/**
+ * 详情
+ *
+ * @author wz
+ * @date 2019-04-02-16:38
+ */
+@WebServlet(name = "Demo1Servlet", urlPatterns = "/demo1")
+public class Demo1Servlet extends HttpServlet {
+
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        response.setContentType("text/html;charset=utf-8");
+        request.setCharacterEncoding("utf-8");
+        String username = request.getParameter("username");
+        System.out.println(username);
+        UserService service = new UserServiceImpl();
+        boolean flag = service.isRegister(username);
+        if (flag){
+            response.getWriter().print("√");
+        }else {
+            response.getWriter().print("当前用户名已存在");
+        }
+
+    }
+
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        this.doGet(request, response);
+    }
+
+}
+

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Insert title here</title>
+        <script src="../js/jquery-3.3.1.min.js"></script>
+        <script src="../js/jquery-3.3.1.js"></script>
+    </head>
+    <script>
+        // onload = function () {
+        //     var obj = document.getElementById("username");
+        //     // alert(obj.value);
+        //     alert($(obj).val());
+        // }
+
+        // $(function () {
+        //     $("#username").change(function () {
+        //         alert($("#username")[0].value)
+        //     }).focus(function () {
+        //         $(this).css({
+        //             "width": "200px",
+        //             "height": "200px",
+        //             "background-color": "red"
+        //         })
+        //     })
+        // });
+
+        $(function () {
+           $("#username").blur(function () {
+               alert($(this).val());
+           })
+        });
+
+    </script>
+    <body>
+        <form id="form1" action="01-获得jQuery对象.html">
+        <input type="text" id="username" class="ad1" value="jack"/>
+            <input type="submit">
+        </form>
+    </body>
+</html>

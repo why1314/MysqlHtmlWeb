@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Insert title here</title>
+        <style type="text/css">
+            div {
+                border: 1px solid #000;
+                width: 100px;
+                height: 100px;
+            }
+        </style>
+        <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+        <script src="js/assist.js"></script>
+        <script>
+            $(function () {
+                $("#b1").click(function () {
+                    $("#b1Div").toggle(2000)
+                })
+            });
+
+            $(function () {
+                $("#b2").click(function () {
+                    $("#b2Div").slideToggle(2000,"linear")
+                })
+            });
+
+            $(function () {
+                $("#b3").click(function () {
+                    $("#b3Div").fadeToggle(2000,"linear")
+                })
+            });
+        </script>
+
+    </head>
+
+    <body>
+        <input type="button" id="b1" value="显示/隐藏 b1Div"/>
+        <div id="b1Div"></div>
+        <br/>
+        <input type="button" id="b2" value="滑出/滑入b2Div"/>
+        <div id="b2Div"></div>
+        <br/>
+        <input type="button" id="b3" value="淡出/淡入b3Div"/>
+        <div id="b3Div"></div>
+
+    </body>
+
+</html>

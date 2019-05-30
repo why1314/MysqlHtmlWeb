@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        function getVal() {
+            alert(document.getElementById("inp").value);
+        }
+
+        function setVal() {
+            document.getElementById("inp").value = "why";
+        }
+    </script>
+</head>
+<body>
+<input type="text" value="tom" id="inp"/><br/>
+<input type="button" value="获取value的值" onclick="getVal()"/>
+<input type="button" value="设置value的值" onclick="setVal()"/>
+</body>
+</html>

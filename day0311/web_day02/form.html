@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            *{
+                margin: 0px;
+                padding: 0px;
+                box-sizing: border-box;
+            }
+            .big{
+                height: 534px;
+                width: 886px;
+                /*box-sizing: border-box;*/
+                margin: 24px auto;
+                border: 8px solid #eeeeee;
+            }
+            .big_lef{
+                width: 29%;
+                float: left;
+                /*box-sizing: border-box;*/
+                padding-top: 20px;
+                padding-left: 20px;
+            }
+            .big_lef .big_lef_firstP{
+                font-size: 20px;
+                color: #ffcd26;
+            }
+            .big_lef .big_lef_secondP{
+                font-size: 20px;
+                color: #a6a6a6;
+            }
+            .big_center{
+                width: 40%;
+                height: 100%;
+                float: left;
+                border: 1px solid red;
+                font-size: 14px;
+            }
+            .big_center_form{
+                /*border: 1px solid red;*/
+                padding-top: 30px;
+                padding-left: 20px;
+                line-height: 45px;
+
+            }
+            input[type="text"],input[type="password"],input[type="datetime-local"]
+            ,input[type="email"],input[type="tel"]{
+                height: 30px;
+                width: 190px;
+                border-radius: 5px;
+            }
+            .td_left{
+                width: 86px;
+                padding-right: 20px;
+                text-align: right;
+            }
+            .td_right{
+                width: 200px;
+                text-align: left;
+            }
+
+           .td_right.check{
+                width: 80px;
+               float: left;
+            }
+
+            .big_right{
+                width: 29%;
+                float: left;
+            }
+
+        </style>
+    </head>
+    <body>
+       <div class="big">
+
+               <div class="big_lef">
+                   <p class="big_lef_firstP">新用户注册</p>
+                   <p class="big_lef_secondP">USER REGISTER</p>
+               </div>
+               <div class="big_center">
+                   <form class="big_center_form">
+                       <table class="big_center_form_table">
+                           <tr>
+                               <td class="td_left">
+                                   <label for="userName">用户名</label>
+                               </td>
+                               <td class="td_right">
+                                   <input type="text" name="userName" id="userName">
+                               </td>
+                           </tr>
+                           <tr>
+                               <td class="td_left">
+                                   <label for="passWord">密码</label>
+                               </td>
+                               <td class="td_right">
+                                   <input type="password" name="passWord" id="passWord">
+                               </td>
+                           </tr>
+                           <tr>
+                               <td class="td_left">
+                                   <label for="Email">Email</label>
+                               </td>
+                               <td class="td_right">
+                                   <input type="email" name="Email" id="Email">
+                               </td>
+                           </tr>
+                           <tr>
+                               <td class="td_left">
+                                   <label for="name">姓名</label>
+                               </td>
+                               <td class="td_right">
+                                   <input type="text" name="name" id="name">
+                               </td>
+                           </tr>
+                           <tr>
+                               <td class="td_left">
+                                   <label for="telPhone">手机号</label>
+                               </td>
+                               <td class="td_right">
+                                   <input type="tel" name="telPhone" id="telPhone">
+                               </td>
+                           </tr>
+                           <tr>
+                               <td class="td_left">性别</td>
+                               <td class="td_right">
+                                   <input type="radio" name="sex" checked="checked">男
+                                   <input type="radio" name="sex">女
+                               </td>
+                           </tr>
+                           <tr>
+                               <td class="td_left">生日</td>
+                               <td class="td_right"><input type="datetime-local" name="brithday"></td>
+                           </tr>
+                           <tr id="yanzheng">
+                               <td class="td_left">验证码</td>
+                               <td class="td_right check" >
+                                   <input type="text" name="pPassWord" >
+                                   <img src="img/verify_code.jpg" width="118" height="30">
+                               </td>
+                           </tr>
+                           <tr>
+                               <td>
+                                   <input type="submit" value="注册">
+                               </td>
+                           </tr>
+                       </table>
+                   </form>
+               </div>
+               <div class="big_right"></div>
+       </div>
+    </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title>遍历对象</title>
+        <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+        <script>
+            $(function () {
+                $("#b1").click(function () {
+                    var $obj = $("ul>li");
+                    for (var i = 0; i < $obj.length; i++) {
+                        alert($($obj[i]).html());
+                    }
+                })
+            });
+
+
+            $(function () {
+                $("#b2").click(function () {
+                    $.each($("ul>li"), function (index, ele) {
+                        alert(index + "--" + $(ele).html())
+                    })
+                });
+
+            });
+
+            $(function () {
+                $("#b3").click(function () {
+                    // var arr = [5, 3, 1, "大密密"];
+                    // // index是索引  ele是js中的dom对象
+                    // $.each(arr, function (index, ele) {
+                    //     alert(index + "  " + ele)
+                    // })
+                    /*只能获取到数组元素，获取不到索引*/
+                    var arr = [5, 3, 1, "大密密"];
+                    for (var ele of $("ul>li")) {
+                        alert($(ele).html())
+                    }
+                });
+
+            });
+        </script>
+    </head>
+    <body>
+        <input type="button" value="获取城市列表内,列表项中的值1" id="b1"/>
+        <input type="button" value="获取城市列表内,列表项中的值2" id="b2"/>
+        <input type="button" value="获取城市列表内,列表项中的值3" id="b3"/>
+        <br/><br/>
+
+        <ul id="city">
+            <li>北京</li>
+            <li>天津</li>
+            <li>上海</li>
+            <li>重庆</li>
+        </ul>
+
+    </body>
+
+</html>

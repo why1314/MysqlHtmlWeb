@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>插件机制</title>
+        <script type="text/javascript" src="../js/jquery-3.3.1.js"></script>
+        <script>
+
+            <!--任何jq对象都可使用-->
+            $.extend({
+                "min": function (i, j) {
+                    return i < j ? i : j;
+                },
+
+                "max": function (i, j) {
+                    return i > j ? i : j;
+                }
+            })
+
+
+            var  max=$.max(1,3);
+            alert(max)
+        </script>
+
+    </head>
+    <body>
+
+    </body>
+</html>

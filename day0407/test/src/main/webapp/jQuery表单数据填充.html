@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>jQuery</title>
+        <script src="js/jquery-1.11.3.js"></script>
+
+        <!-- 页面加载完毕执行的jquery代码 -->
+        <script type="text/javascript">
+            $(function () {
+
+                $("form").append("<input type='submit' value='提交' />");
+
+                $("form").prop({"method": "post", "action": "http://www.czxy.com"});
+
+                $("input[type='text']").prop("name","username");
+                $("input[type='password']").val("123");
+
+                $("input[value='woman']").prop("checked","checked");
+                $("input[value='code']").prop("checked","checked");
+                $("input[value='swim']").prop("checked","checked");
+
+                $("select option[value='BJ']").prop("selected","selected");
+
+            })
+        </script>
+    </head>
+
+    <body>
+
+        <hr/>
+
+
+        <form>
+            用户名：<input type="text" value="小智"/>
+            <br/>
+            密　码：<input type="password" name="pwd"/>
+            <br/>
+
+            性　别：
+            <input type="radio" name="sex" value="man"/>男
+            <input type="radio" name="sex" value="woman"/>女
+            <br/>
+            爱　好：
+            <input type="checkbox" name="hobby" value="code"/>编程
+            <input type="checkbox" name="hobby" value="run"/>跑步
+            <input type="checkbox" name="hobby" value="swim"/>游泳
+            <br/>
+            籍　贯：
+            <select name="addr">
+                <option value="JS">江苏</option>
+                <option value="BJ">北京</option>
+                <option value="SH">上海</option>
+            </select>
+            <br/>
+
+        </form>
+
+    </body>
+</html>

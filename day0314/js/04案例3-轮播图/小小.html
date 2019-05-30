@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        onload = function () {
+            var b2 = document.getElementById("b2");
+            b2.onclick=function () {
+                var aNodes=document.getElementsByTagName("a");
+                for(var index=0; index<aNodes.length;index++){
+                    aNodes[index].href="http://www.baidu.com";
+                }
+            }
+
+            var b3= document.getElementById("b3");
+            b3.onclick=function () {
+                var divs=document.getElementsByName("one");
+                for(var index=0; index<divs.length;index++){
+                    divs[index].innerHTML="<a href='#'>黑马程序员</a>"
+                }
+            }
+
+            var b4= document.getElementById("b4");
+            b4.onclick=function () {
+                var divs=document.getElementsByClassName("two");
+                for(var index=0; index<divs.length;index++){
+                    divs[index].innerHTML="<a href='#'>javaEE开发</a>"
+                }
+            }
+
+        }
+    </script>
+
+</head>
+<body>
+<input type="button" value="(通过标签名)给a链接添加地址" id="b2">
+<input type="button" value="(通过name属性)给div设值" id="b3">
+<input type="button" value="(通过类名)给div设值" id="b4"><br>
+
+<a>传智播客</a><br>
+<a>传智播客</a><br>
+<a>传智播客</a><br>
+<hr>
+<div name="one"></div>
+<div name="one"></div>
+<div name="one"></div>
+<hr>
+<div class="two"></div>
+<div class="two"></div>
+<div class="two"></div>
+</body>
+</html>
